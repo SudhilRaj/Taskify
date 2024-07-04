@@ -276,7 +276,7 @@ const EditTask = () => {
                 {editMode && (
                   <button
                     onClick={handleCancel}
-                    className="bg-indigo-400 hover:bg-indigo-800 transition text-xl font-bold text-white p-4 max-sm:p-3 max-sm:text-lg rounded-xl w-full"
+                    className="bg-indigo-400 hover:bg-indigo-500 transition text-xl font-bold text-white p-4 max-sm:p-3 max-sm:text-lg rounded-xl w-full"
                   >
                     Cancel
                   </button>
@@ -285,9 +285,9 @@ const EditTask = () => {
                   type="submit"
                   className={`
                     ${formObj.title.length > 30 || formObj.description.length > 150 || !isFieldsChanged
-                      ? "bg-indigo-700 cursor-not-allowed text-indigo-400"
-                      : "hover:bg-indigo-800 text-white"
-                      }transition text-xl font-bold bg-indigo-400  p-4 max-sm:p-3 max-sm:text-lg rounded-xl w-full`}
+                      ? "bg-amber-300 cursor-not-allowed text-indigo-400"
+                      : "hover:bg-amber-500 text-white"
+                      }transition text-xl font-bold bg-amber-400  p-4 max-sm:p-3 max-sm:text-lg rounded-xl w-full`}
                     disabled={formObj.title.length > 30 || formObj.description.length > 150 || !isFieldsChanged ? true : false}
                 >
                   {editMode ? "Update Task" : "Create Task"}

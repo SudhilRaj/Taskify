@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import { Toaster } from 'react-hot-toast';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import Fallback from './components/Fallback';
 import { DataProvider } from './context/DataContext';
 import routes from "./routes/allRoutes";
 import './main.css';
@@ -11,12 +12,12 @@ const root = ReactDOM.createRoot(document.getElementById("root")!);
 
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<p>Fallback</p>}>
+    <Suspense fallback={<Fallback />}>
       <DataProvider>
         {/* A different way of routing */}
         <RouterProvider
           router={browserRouter}
-          fallbackElement={<div>Loading...</div>}
+          fallbackElement={<Fallback />}
         />
         <Toaster position="bottom-center" toastOptions={{duration: 3000}}/>
       </DataProvider>

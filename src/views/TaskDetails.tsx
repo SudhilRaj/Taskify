@@ -20,7 +20,7 @@ const TaskDetails = () => {
         <div>
           <TopNav title={"Task Details"} />
 
-          <div className=" rounded-2xl bg-indigo-700 max-w-[600px] m-auto mt-16 py-10 px-8 max-sm:p-5 text-white">
+          <div className=" rounded-2xl bg-amber-300 max-w-[600px] m-auto mt-16 py-10 px-8 max-sm:p-5 text-[#424242]">
             <h1 className=" text-center text-4xl max-sm:text-2xl font-bold">
               Task - {details?.title ?? ""}
             </h1>
@@ -69,7 +69,7 @@ const TaskDetails = () => {
                 <div className="flex flex-wrap gap-3 max-sm:gap-2">
                   {details?.category && details.category.map((cat: Category, index: number) => (
                     <p
-                      className="text-left text-base bg-indigo-600 border-indigo-300 border-2 flex items-center gap-1 font-medium rounded-2xl px-3 py-1 max-sm:text-xs max-sm:py-0"
+                      className="text-left text-base bg-amber-500 border-amber-200 border-2 flex items-center gap-1 font-medium rounded-2xl px-3 py-1 max-sm:text-xs max-sm:py-0"
                       key={index}
                     >
                        <span className=" text-xl max-sm:text-lg">{cat.emoji}</span> {cat.category}
